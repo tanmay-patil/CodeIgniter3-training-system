@@ -1,3 +1,2 @@
-# CodeIgniter 3 - Fully Working Login Demo Project
-This is a Login Demo project created using CodeIgniter 3. 
-This project makes use of a MySQL database "ci", which you can import in your database. The SQL file is placed in database_file/ folder.
+# CodeIgniter3-training-system
+An Employee/Student training system which can be used to impart training assignments and tutorials by an admin to the employees/students. This is a web project based on CodeIgniter-3
