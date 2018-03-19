@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Base controller for all the controllers of this application
-class MY_Controller extends CI_Controller {
+class BASE_Controller extends CI_Controller {
 
     public function __construct(){      
         

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed in Login controller');
 
-class Login_controller extends MY_Controller {
+class Login_controller extends BASE_Controller {
 
 	/**
 	 * Index Page for this controller.
