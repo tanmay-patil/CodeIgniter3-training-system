@@ -88,9 +88,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 defined('PROJECT_NAME') OR define('PROJECT_NAME', 'CI3');
 
 // DATABASE CONSTANTS
-defined('USERS') OR define('USERS', 'table_users');
+defined('USERS') OR define('USERS', 'users');
 
 // CONTROLLER NAME CONSTANTS
 defined('LOGIN_CONTROLLER') OR define('LOGIN_CONTROLLER', 'Login_controller');
-defined('ADMIN_CONTROLLER') OR define('ADMIN_CONTROLLER', 'Admin_controller');
-defined('USER_CONTROLLER') OR define('USER_CONTROLLER', 'User_controller');
+defined('TRAINER_CONTROLLER') OR define('TRAINER_CONTROLLER', 'Trainer_controller');
+defined('TRAINEE_CONTROLLER') OR define('TRAINEE_CONTROLLER', 'Trainee_controller');

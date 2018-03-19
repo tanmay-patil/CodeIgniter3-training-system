@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed in Login controller');
 
-class Login_controller extends CI_Controller {
+class Login_controller extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -32,12 +32,12 @@ class Login_controller extends CI_Controller {
 
 		// Check if user is already logged in
 		 if($this->isLoggedIn()){
-			// Check if not an admin
+			// Check if a trainer
             if($this->session->userdata("access_type") == 1){
-				redirect('../'.ADMIN_CONTROLLER.'');
+				redirect('../'.TRAINER_CONTROLLER.'');
 			}
 			else if($this->session->userdata("access_type") == 2){
-				redirect('../'.USER_CONTROLLER.'');
+				redirect('../'.TRAINEE_CONTROLLER.'');
 			}
 		}
 		else{
@@ -67,14 +67,14 @@ class Login_controller extends CI_Controller {
 				$this->setSessionData($authenticationStatus["data"]);
 
 				// Check the access type of the user
-				if($userType == 1){	// Admin
-					// ADMIN USER
+				if($userType == 1){	// Trainer
+					// TRAINER USER
 					// Redirect					
-					redirect('../'.ADMIN_CONTROLLER.'');
+					redirect('../'.TRAINER_CONTROLLER.'');
 				}
 				else if($userType == 2){	// User
 					// NORMAL USER
-					redirect('../'.USER_CONTROLLER.'');
+					redirect('../'.TRAINEE_CONTROLLER.'');
 				}
 
 			}
@@ -104,26 +104,5 @@ class Login_controller extends CI_Controller {
 
 		$this->load->view('Login_view', $data);
 	}
-
-	public function setSessionData($data){
-		$sessionData = array(
-		'username'  => $data->username,
-		'access_type'     => $data->type);
-
-		$this->session->set_userdata($sessionData);
-	}
-
-	public function isLoggedIn(){
-        if($this->session->userdata("access_type") != null){
-            return true;
-        }
-        else{
-            return false;
-        }
-	}
 	
-	public function logout(){
-		// Destroy the session
-		$this->session->sess_destroy();
-	}
 }
