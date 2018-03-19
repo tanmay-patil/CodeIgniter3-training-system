@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    PROJECT_NAME = "CI3_Login_Demo";
+    PROJECT_NAME = "CI3";
     BASE_URL = window.location.origin + "/" + PROJECT_NAME + "/";
 });
 
