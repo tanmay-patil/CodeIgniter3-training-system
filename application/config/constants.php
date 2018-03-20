@@ -89,6 +89,10 @@ defined('PROJECT_NAME') OR define('PROJECT_NAME', 'CI3');
 
 // DATABASE CONSTANTS
 defined('USERS') OR define('USERS', 'users');
+defined('TRAINING_ASSIGNMENT') OR define('TRAINING_ASSIGNMENT', 'training_assignment');
+defined('TEST_ASSIGNMENT') OR define('TEST_ASSIGNMENT', 'test_assignment');
+defined('TRAININGS') OR define('TRAININGS', 'trainings');
+defined('TESTS') OR define('TESTS', 'tests');
 
 // CONTROLLER NAME CONSTANTS
 defined('LOGIN_CONTROLLER') OR define('LOGIN_CONTROLLER', 'Login_controller');

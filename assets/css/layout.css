@@ -1,0 +1,30 @@
+#ci_header_container {
+    padding: 10px;
+    width: 100%;
+    background: #e7f3ff;
+}
+
+.ci-btn {
+    border: none;
+    padding: 5px;
+    width: 8em;
+    cursor: pointer;
+}
+
+.ci-btn-blue {
+    background: #3f77b3;
+    color: white;
+}
+
+.float-right {
+    float: right;
+}
+
+.inline {
+    display: inline;
+}
+
+.ci-top-bar-heading {
+    font-size: 18px;
+    font-weight: bold;
+}

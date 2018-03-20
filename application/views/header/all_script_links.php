@@ -6,3 +6,4 @@
 
 <!-- INCLUDE CSS STYLESHEETS -->
   <link rel="stylesheet" href="<?php echo asset_url().'lib/bootstrap-4.0.0/css/bootstrap.css'; ?>">
+  <link rel="stylesheet" href="<?php echo asset_url().'css/layout.css'; ?>">

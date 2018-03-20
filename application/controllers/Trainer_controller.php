@@ -8,48 +8,47 @@ class Trainer_controller extends BASE_Controller {
         //use the line parent::__construct(); when you want a constructor in the child class to do something, AND execute the parent constructor
 		parent::__construct();
         
-		$this->load->view('header/all_script_links');
-		$this->load->view('layout/top-bar');
+        if($this->isLoggedIn()){
+
+            // Check if trainer
+            if($this->isTrainer()){
+                $this->load->view('header/all_script_links');
+                $this->load->view('layout/top-bar');
+                $this->load->view('layout/nav-bar');
+            }
+            else{
+                // Redirect to login page
+                redirect('../'.LOGIN_CONTROLLER.'');
+            }
+        }
+        else{
+            // Redirect to login page
+            redirect('../'.LOGIN_CONTROLLER.'');
+        }
+
+		
     }
 
 	public function index(){
-
-         if($this->isLoggedIn()){
-
-            // Check if trainer
-            if($this->isTrainer()){
-                redirect('../'.Trainer_CONTROLLER.'/home');
-            }
-            else{
-                // Redirect to login page
-                redirect('../'.LOGIN_CONTROLLER.'');
-            }
-        }
-        else{
-            // Redirect to login page
-            redirect('../'.LOGIN_CONTROLLER.'');
-        }
-
+        //  redirect('../'.TRAINER_CONTROLLER.'/home');
     }
 
     public function home(){
-
-        if($this->isLoggedIn()){
-            // Check if trainer
-            if($this->isTrainer()){
-                $this->load->view('trainer/index');
-                $this->load->view('user/index');
-            }
-            else{
-                // Redirect to login page
-                redirect('../'.LOGIN_CONTROLLER.'');
-            }
-        }
-        else{
-            // Redirect to login page
-            redirect('../'.LOGIN_CONTROLLER.'');
-        }       
+        $this->load->view('trainer/index');
     }
 
+    /* FUNCTIONS TO BE TRANSFERRED INTO BASE CONTROLLER */
+    public function goToMyTrainings(){
+        $mappedDataArray = array(); // will contain training names mapped to the user
+        $mappedDataArray = $this->getUserTrainingMappedData();        
+        $this->loadMyTrainingsView($mappedDataArray);
+    }
+
+    public function goToMyTests(){
+        $mappedDataArray = array(); // will contain training names mapped to the user
+        $mappedDataArray = $this->getUserTestMappedData();      
+        $this->loadMyTestsView($mappedDataArray);
+    }
+    //------------------------------------------------------
 }
 ?>
