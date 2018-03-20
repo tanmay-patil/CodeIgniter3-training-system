@@ -46,6 +46,28 @@ class Trainee_controller extends BASE_Controller {
         $mappedDataArray = $this->getUserTestMappedData();      
         $this->loadMyTestsView($mappedDataArray);
     }
+
+    public function goToViewTraining($training_id){    
+
+        // Check if this training belongs to this user
+        if($this->isTrainingBelongingToUser($training_id)){
+            $this->loadTrainingView($training_id);
+        }
+        else{
+            echo "Unauthorized acccess";
+        }
+    }
+
+    public function goToViewTest($test_id){    
+
+        // Check if this test belongs to this user
+        if($this->isTestBelongingToUser($test_id)){
+            $this->loadTestView($test_id);
+        }
+        else{
+            echo "Unauthorized acccess";
+        }
+    }
     //------------------------------------------------------
 
 }

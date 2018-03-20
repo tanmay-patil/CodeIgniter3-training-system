@@ -14,6 +14,23 @@
 .ci-btn-blue {
     background: #3f77b3;
     color: white;
+    transition: 0.4s;
+}
+
+.ci-btn-blue:hover {
+    background: #1f5894;
+    transition: 0.4s;
+}
+
+.ci-btn-red {
+    background: #b55757;
+    color: white;
+    transition: 0.4s;
+}
+
+.ci-btn-red:hover {
+    background: #753737;
+    transition: 0.4s;
 }
 
 .float-right {
@@ -27,4 +44,30 @@
 .ci-top-bar-heading {
     font-size: 18px;
     font-weight: bold;
+}
+
+form {
+    margin-bottom: 0em;
+}
+
+.ci-topic {
+    font-size: 20px;
+}
+
+.ci-content {
+    font-size: 18px;
+}
+
+.ci-card-container {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: default;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.ci-card-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
