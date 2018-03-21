@@ -28,8 +28,8 @@
                 Create
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" id="ci_tab_new_training" href="#">New Training</a>
-                <a class="dropdown-item" id="ci_tab_new_test" href="#">New Test</a>
+                <a class="dropdown-item" id="ci_tab_new_training" href='<?php echo controller_url().$controller."/goToCreateNewTraining";?>'>New Training</a>
+                <a class="dropdown-item" id="ci_tab_new_test" href='<?php echo controller_url().$controller."/goToCreateNewTest";?>'>New Test</a>
                 </div>
             </li>
             <?php

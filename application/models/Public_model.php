@@ -177,4 +177,17 @@ class Public_model extends CI_Model  {
 
 		return $response;
 	}
+
+	public function insertNewTraining($training_topic, $training_json){
+		$response = array();
+		
+		$data = array(
+			"training_topic" => $training_topic,
+			"training_json" => $training_json
+		);
+
+		$this->db->insert(TRAININGS,$data);
+
+		return ($this->db->affected_rows() != 1) ? false : true;
+	}
 }

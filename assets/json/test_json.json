@@ -24,8 +24,7 @@
             ],
             "questionText": "Sample Question 1 Text",
             "correctOptionId": [
-                1,
-                3
+                1
             ]
         },
         {
@@ -48,8 +47,30 @@
             ],
             "questionText": "Sample Question 2 Text",
             "correctOptionId": [
-                2,
-                4
+                2
+            ]
+        },
+        {
+            "options": [{
+                    "optionId": 1,
+                    "optionText": "Sample 1 Option Text"
+                },
+                {
+                    "optionId": 2,
+                    "optionText": "Sample 2 Option Text"
+                },
+                {
+                    "optionId": 3,
+                    "optionText": "Sample 3 Option Text"
+                },
+                {
+                    "optionId": 4,
+                    "optionText": "Sample 4 Option Text"
+                }
+            ],
+            "questionText": "Sample Question 3 Text",
+            "correctOptionId": [
+                3
             ]
         }
     ]

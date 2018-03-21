@@ -19,10 +19,11 @@ class BASE_Controller extends CI_Controller {
 		$sessionData = array(
 		'user_id'  => $data->user_id,
 		'username'  => $data->username,
+		'name'  => $data->name,
 		'access_type'     => $data->type);
 
 		$this->session->set_userdata($sessionData);
-    }    
+    }
     
 	public function logout(){
 		// Destroy the session
@@ -222,6 +223,18 @@ class BASE_Controller extends CI_Controller {
         }
 
         return $test_json;
+    }
+
+    public function getAllUsersList(){
+        $result = $this->Public_model->getAllRecords(USERS);
+
+        return $result;
+    }
+
+    public function saveNewTrainingInDb($training_topic, $training_json){
+        $result = $this->Public_model->insertNewTraining($training_topic, $training_json);
+
+        return $result;
     }
 
 }// end class

@@ -1,7 +1,7 @@
 <?php
 
-    echo "Welcome to my ".$tabName;
-    var_dump($mappedDataArray);
+    // echo "Welcome to my ".$tabName;
+    // var_dump($mappedDataArray);
 
     $controller = "";
     if($this->session->userdata("access_type") == 1){
