@@ -188,6 +188,38 @@ class Public_model extends CI_Model  {
 
 		$this->db->insert(TRAININGS,$data);
 
-		return ($this->db->affected_rows() != 1) ? false : true;
+		// If query successful
+		if($this->db->affected_rows() == 1){
+			$insert_id = $this->db->insert_id();
+			$response = array('status' => 200, 'message' => 'Record Inserted Successfully', 'inserted_training_id'=> $insert_id);
+		}
+		else{
+			$response = array('status' => 400, 'message' => 'Failed to insert the training');
+		}
+
+		return $response;
+	}
+
+	public function insertUserTrainingAssignment($user_id, $training_id){
+		$response = array();
+		
+		$data = array(
+			"user_id" => $user_id,
+			"training_id" => $training_id,
+			"status" => 0	
+		);
+
+		$this->db->insert(TRAINING_ASSIGNMENT,$data);
+
+		// If query successful
+		if($this->db->affected_rows() == 1){
+			$insert_id = $this->db->insert_id();
+			$response = array('status' => 200, 'message' => 'Record Inserted Successfully', 'inserted_training_id'=> $insert_id);
+		}
+		else{
+			$response = array('status' => 400, 'message' => 'Failed to insert the training');
+		}
+
+		return $response;
 	}
 }

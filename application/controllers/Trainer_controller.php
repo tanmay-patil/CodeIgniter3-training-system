@@ -100,10 +100,25 @@ class Trainer_controller extends BASE_Controller {
         $result = $this->saveNewTrainingInDb($this->input->post('ci_form_topic'), $training_json);
 
         // If new training saved successfully, insert a user-training assignment
-        if($result){
-            echo "<h1>SUCCESSFULLY SAVED NEW TRAINING</h1>";
+        if($result["status"] == 200){
+            $insertedTrainingId = $result["inserted_training_id"];
+
+            // Iterate for every user
+            for($i=0; $i<count($formData["userAssign"]); $i++){
+                $userId = $formData["userAssign"][$i];
+
+                // save a training assignment for this user
+                $this->saveUserTrainingAssignment($userId, $insertedTrainingId);
+            }
         }
 
+        // Redirect user to my trainings page
+        redirect('../'.TRAINER_CONTROLLER.'/goToMyTrainings');
+
+    }
+
+    public function saveUserTrainingAssignment($user_id, $training_id){
+        $result = $this->saveUserTrainingAssignmentInDb($user_id, $training_id);
     }
 
 

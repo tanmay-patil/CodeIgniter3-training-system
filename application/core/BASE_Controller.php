@@ -237,6 +237,12 @@ class BASE_Controller extends CI_Controller {
         return $result;
     }
 
+    public function saveUserTrainingAssignmentInDb($user_id, $training_id){
+        $result = $this->Public_model->insertUserTrainingAssignment($user_id, $training_id);
+
+        return $result;
+    }
+
 }// end class
 
 ?>
