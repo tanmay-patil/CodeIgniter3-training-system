@@ -1,13 +1,14 @@
 $(window).on("load", function() {
 
-    // On load code for TRAINER HOME goes here
-
-    // CreateTest
-    var createTestObj = new CreateTest();
-    createTestObj.addEventToTab();
-
-    // CreateTraining
-    var createTrainingObj = new CreateTraining();
-    createTrainingObj.addEventToTab();
 
 });
+
+function addNewQuestion() {
+    var createTestObj = new CreateTest();
+    createTestObj.newQuestion();
+}
+
+function saveNewTest() {
+    var createTestObj = new CreateTest();
+    createTestObj.save();
+}

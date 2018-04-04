@@ -22,6 +22,17 @@
     transition: 0.4s;
 }
 
+.ci-btn-green {
+    background: #28ad54;
+    color: white;
+    transition: 0.4s;
+}
+
+.ci-btn-green:hover {
+    background: #1f9432;
+    transition: 0.4s;
+}
+
 .ci-btn-red {
     background: #b55757;
     color: white;
@@ -71,4 +82,12 @@ form {
 .ci-card-theme-blue {
     background: #e7f3ff;
     color: #00487d;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.ci-btn-wide {
+    width: 15em;
 }

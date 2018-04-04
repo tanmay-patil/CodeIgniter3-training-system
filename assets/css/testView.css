@@ -75,3 +75,16 @@
     border-radius: 50%;
     background: white;
 }
+
+.ci-form-question-container {
+    background: #f9f9f9;
+    width: 98%;
+    color: #b95959;
+    font-weight: bold;
+}
+
+#ci_form_test_container {
+    background: #6a859c;
+}
+
+.ci-form-option-input {}

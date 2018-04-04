@@ -120,7 +120,17 @@ class Trainer_controller extends BASE_Controller {
     public function saveUserTrainingAssignment($user_id, $training_id){
         $result = $this->saveUserTrainingAssignmentInDb($user_id, $training_id);
     }
+    
+    public function saveNewTest(){
+         // Fetch all form data
+        $formData["createdBy"] = $this->session->userdata("name");
+        $formData["trainingTopic"] = $this->input->post('ci_form_topic');
+        $formData["duration"] = $this->input->post('ci_form_duration');
+        $formData["min_passing_marks"] = $this->input->post('ci_form_passing_marks');
+        $formData["userAssign"] = $this->input->post('ci_checkbox_user');
 
+        var_dump($this->input->post);
+    }
 
     /* FUNCTIONS TO BE TRANSFERRED INTO BASE CONTROLLER */
     public function goToMyTrainings(){

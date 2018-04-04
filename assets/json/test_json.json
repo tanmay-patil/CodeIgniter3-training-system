@@ -1,8 +1,9 @@
 {
     "header": {
         "created_by": "User1",
-        "test_name": "HTML 5 Test",
-        "duration_hours": "1.5"
+        "test_name": "Sample Test",
+        "duration_hours": "1.5",
+        "min_passing_marks": "2"
     },
     "question_set": [{
             "options": [{
@@ -71,6 +72,75 @@
             "questionText": "Sample Question 3 Text",
             "correctOptionId": [
                 3
+            ]
+        },
+        {
+            "options": [{
+                    "optionId": 1,
+                    "optionText": "Sample 1 Option Text"
+                },
+                {
+                    "optionId": 2,
+                    "optionText": "Sample 2 Option Text"
+                },
+                {
+                    "optionId": 3,
+                    "optionText": "Sample 3 Option Text"
+                },
+                {
+                    "optionId": 4,
+                    "optionText": "Sample 4 Option Text"
+                }
+            ],
+            "questionText": "Sample Question 4 Text",
+            "correctOptionId": [
+                4
+            ]
+        },
+        {
+            "options": [{
+                    "optionId": 1,
+                    "optionText": "Sample 1 Option Text"
+                },
+                {
+                    "optionId": 2,
+                    "optionText": "Sample 2 Option Text"
+                },
+                {
+                    "optionId": 3,
+                    "optionText": "Sample 3 Option Text"
+                },
+                {
+                    "optionId": 4,
+                    "optionText": "Sample 4 Option Text"
+                }
+            ],
+            "questionText": "Sample Question 5 Text",
+            "correctOptionId": [
+                1
+            ]
+        },
+        {
+            "options": [{
+                    "optionId": 1,
+                    "optionText": "Sample 1 Option Text"
+                },
+                {
+                    "optionId": 2,
+                    "optionText": "Sample 2 Option Text"
+                },
+                {
+                    "optionId": 3,
+                    "optionText": "Sample 3 Option Text"
+                },
+                {
+                    "optionId": 4,
+                    "optionText": "Sample 4 Option Text"
+                }
+            ],
+            "questionText": "Sample Question 6 Text",
+            "correctOptionId": [
+                1
             ]
         }
     ]
